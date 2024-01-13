@@ -1,0 +1,15 @@
+
+
+
+@media screen and (max-width:1600px) {
+    .banner-overlay{
+        width: 50% !important;
+    }
+}
+@media screen and (max-width:760px) {
+    .banner-overlay{
+        width: 80% !important;
+        margin: auto;
+    }
+}
+
