@@ -1,11 +1,13 @@
 import AreaProperty from "@/components/AreaProperty/AreaProperty";
 import Banner from "@/components/Banner/Banner";
+import FeaturedHouse from "@/components/FeaturedHouse/FeaturedHouse";
 
 const page = () => {
   return (
     <div>
-      <Banner></Banner>
-      <AreaProperty></AreaProperty>
+      <Banner />
+      <AreaProperty />
+      <FeaturedHouse />
     </div>
   );
 };
