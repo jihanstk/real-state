@@ -88,7 +88,7 @@ const AreaProperty = () => {
   return (
     <div className="areaProperty-main">
       <div>
-        <h1 className="text-4xl font-bold text-center">Property By Area</h1>
+        <h1 className="text-4xl  text-center">Property By Area</h1>
         <p className="md:w-1/2 w-11/12 text-slate-800/50 text-center mx-auto">
           Highlight the best of your properties by using the List Category
           shortcode. You can list categories, types, cities, areas and states of
@@ -110,7 +110,7 @@ const AreaProperty = () => {
             <div className="areaProperty-des-container">
               <Link
                 href="#"
-                className="text-xl font-semibold hover:text-slate-700"
+                className="text-xl font-semibold hover:text-green-800 duration-150"
               >
                 {city.cityName}
               </Link>
