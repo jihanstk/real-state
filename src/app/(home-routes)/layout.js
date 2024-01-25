@@ -1,5 +1,5 @@
 const homeRoute = ({ children }) => {
-  return <div>{children}</div>;
+  return <div className="overflow-hidden">{children}</div>;
 };
 
 export default homeRoute;
