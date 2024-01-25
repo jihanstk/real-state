@@ -179,7 +179,7 @@ const FeaturedHouse = () => {
           specific categories.
         </p>
       </div>
-      <div className="latest-container">
+      <div className="latest-container w-full">
         {houses.slice(0, 6).map((house) => (
           <div key={house.id} className="latest-sub">
             <div className="latest-post-image overflow-hidden">
@@ -188,7 +188,7 @@ const FeaturedHouse = () => {
                 height={1000}
                 src={house.housePhoto}
                 alt={house.title}
-                className="h-[12rem] object-cover rounded-md hover:scale-110 duration-1000"
+                className="h-[12rem] object-cover rounded-md duration-1000 ease-in-out"
               />
             </div>
             <div className="latest-post-content py-5">
@@ -198,7 +198,7 @@ const FeaturedHouse = () => {
                 </h2>
               </Link>
               <p className="text-slate-500">
-                {house.description.slice(0, 100)}
+                {house.description.slice(0, 100)}...
               </p>
               <div className="flex justify-between mt-3 text-center text-slate-600">
                 <p className="flex gap-2 items-center text-xl w-3/4 text-center">
@@ -236,18 +236,19 @@ const FeaturedHouse = () => {
                   <span className="text-xl"> {house.rating}</span>
                 </p>
               </div>
-              <div className="flex items-center gap-3">
-                <Image
-                  width={100}
-                  height={100}
-                  className="w-10 h-10 rounded-full object-cover"
-                  src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="user"
-                />
-                <Link href="#">
+              <Link href="#">
+                <div className="flex items-center gap-3">
+                  <Image
+                    width={100}
+                    height={100}
+                    className="w-10 h-10 rounded-full object-cover"
+                    src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    alt="user"
+                  />
+
                   <p className="text-xl">{house.user}</p>
-                </Link>
-              </div>
+                </div>
+              </Link>
             </div>
           </div>
         ))}
