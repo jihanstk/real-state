@@ -46,7 +46,7 @@ const Navigation = () => {
         <Link href="/">
           {" "}
           <h1 className="md:text-3xl sm:text-2xl text-xl font-bold">
-            Homes🏠Hub
+            House🏠Hub
           </h1>
         </Link>
       </div>

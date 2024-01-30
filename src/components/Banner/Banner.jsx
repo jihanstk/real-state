@@ -50,7 +50,7 @@ const Banner = () => {
                 src={image.path}
                 alt="House Image"
               />
-              <div className="absolute top-0 w-full h-full bg-black/50 rounded-3xl flex items-center ">
+              <div className="absolute top-0 w-full h-full bg-blue-600/20 rounded-3xl flex items-center ">
                 <div className=" banner-overlay  w-full md:ml-32 p-4 md:text-left text-center">
                   <h1 className="md:text-5xl text-5xl  md:font-bold text-white">
                     We will help you find your{" "}
