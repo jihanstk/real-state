@@ -1,18 +1,19 @@
-import React from "react";
-import { HiOfficeBuilding } from "react-icons/hi";
-import { FaPhone } from "react-icons/fa6";
+import Image from "next/image";
 import { BsPhoneFlip } from "react-icons/bs";
+import { FaPhone } from "react-icons/fa6";
+import { HiOfficeBuilding } from "react-icons/hi";
 import { MdEmail } from "react-icons/md";
 import { RiComputerLine } from "react-icons/ri";
-import Image from "next/image";
 
-import { FaFacebookF } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
-import { FaTelegram } from "react-icons/fa";
-import { FaTiktok } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagramSquare,
+  FaTelegram,
+  FaTiktok,
+  FaWhatsapp,
+  FaYoutube,
+} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { FaYoutube } from "react-icons/fa";
-import { FaInstagramSquare } from "react-icons/fa";
 import { MdOutgoingMail } from "react-icons/md";
 
 const Footer = () => {
@@ -39,9 +40,15 @@ const Footer = () => {
       price: "$ 150,000",
     },
   ];
+
   return (
+<<<<<<< HEAD
+    <div className="bg-[#001a33] text-slate-300  w-full bottom-0 md:fixed z-0 left-0">
+      <div className="w-11/12 m-auto flex justify-between p-8">
+=======
     <div className="bg-[#001a33] text-slate-300 ">
       <div className="w-11/12 m-auto md:flex lg:flex justify-between p-8">
+>>>>>>> ea0325258a87966b40923d542669165a1cd80ff6
         <div>
           <p className="font-bold text-2xl mb-4 text-white">Contact Us</p>
           <p className="flex items-center my-3">
@@ -92,7 +99,9 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <h3 className="font-bold text-2xl mb-4 text-white">Lists Bt Category</h3>
+          <h3 className="font-bold text-2xl mb-4 text-white">
+            Lists By Category
+          </h3>
           <p className=" my-2">Apartments (17)</p>
           <p className=" my-2">Condos (8)</p>
           <p className=" my-2">Houses (5)</p>
@@ -103,7 +112,9 @@ const Footer = () => {
           <p className=" my-2">Villas (4)</p>
         </div>
         <div>
-          <h3 className="font-bold text-2xl mb-4 text-white">Latest Properties</h3>
+          <h3 className="font-bold text-2xl mb-4 text-white">
+            Latest Properties
+          </h3>
           <div>
             {houses.map((house) => (
               <div key={house.id} className="flex items-center m-3">
