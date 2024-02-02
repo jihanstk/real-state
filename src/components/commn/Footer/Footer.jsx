@@ -42,8 +42,13 @@ const Footer = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="bg-[#001a33] text-slate-300  w-full bottom-0 md:fixed z-0 left-0">
       <div className="w-11/12 m-auto flex justify-between p-8">
+=======
+    <div className="bg-[#001a33] text-slate-300 ">
+      <div className="w-11/12 m-auto md:flex lg:flex justify-between p-8">
+>>>>>>> ea0325258a87966b40923d542669165a1cd80ff6
         <div>
           <p className="font-bold text-2xl mb-4 text-white">Contact Us</p>
           <p className="flex items-center my-3">
