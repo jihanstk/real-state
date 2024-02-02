@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { IoBedOutline, IoStar } from "react-icons/io5";
+import { IoBedOutline } from "react-icons/io5";
 import { PiToiletDuotone } from "react-icons/pi";
 
 import "./FeaturedHouse.css";
@@ -200,7 +200,7 @@ const FeaturedHouse = () => {
               <p className="text-slate-500">
                 {house.description.slice(0, 100)}...
               </p>
-              <div className="flex justify-between mt-3 text-center text-slate-600">
+              <div className="flex justify-between mt-3 text-center text-slate-600 my-5">
                 <p className="flex gap-2 items-center text-xl w-3/4 text-center">
                   <span>
                     <IoBedOutline />
@@ -219,7 +219,7 @@ const FeaturedHouse = () => {
                   <span>{house.toilet}</span>
                 </p>
               </div>
-              <div className="flex items-center justify-between my-4">
+              {/* <div className="flex items-center justify-between my-4">
                 <p className="text-xl">
                   <span className="font-bold"> $ </span>
                   {house.price}
@@ -235,7 +235,7 @@ const FeaturedHouse = () => {
                   </span>{" "}
                   <span className="text-xl"> {house.rating}</span>
                 </p>
-              </div>
+              </div> */}
               <Link href="#">
                 <div className="flex items-center gap-3">
                   <Image
