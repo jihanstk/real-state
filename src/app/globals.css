@@ -10,4 +10,7 @@ html{
 body{
   font-family: "League Spartan", sans-serif;
 }
+.login-form .modal-box{
+  max-width: 60% !important;
+}
 

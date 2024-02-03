@@ -2,8 +2,10 @@
 import Link from "next/link";
 import { useState } from "react";
 import { BsTelephoneFill } from "react-icons/bs";
+import { GiCancel } from "react-icons/gi";
 import { HiOutlineBars3BottomLeft } from "react-icons/hi2";
 import { PiUserCircleFill } from "react-icons/pi";
+
 import LoginForm from "../commn/LoginForm/LoginForm";
 import NavLink from "../commn/NavLink/NavLink";
 
@@ -121,25 +123,25 @@ const Navigation = () => {
               <BsTelephoneFill className="text-green-800" /> <p>01888351004</p>
             </a>
           </div>
-          <p className="text-3xl">
-            <PiUserCircleFill />
-          </p>
-        </div>
-        <div className="">
-          {/* The button to open modal */}
-          <label htmlFor="my_modal_6" className=" cursor-pointer">
-            <PiUserCircleFill className="text-3xl" />
-          </label>
+          <div className="login-form">
+            {/* The button to open modal */}
+            <label htmlFor="my_modal_6" className=" cursor-pointer">
+              <PiUserCircleFill className="text-3xl" />
+            </label>
 
-          {/* Put this part before </body> tag */}
-          <input type="checkbox" id="my_modal_6" className="modal-toggle" />
-          <div className="modal" role="dialog">
-            <div className=" modal-box w-1/2 bg-white ">
-              <LoginForm></LoginForm>
-              <div className="modal-action">
-                <label htmlFor="my_modal_6" className="btn">
-                  Close!
-                </label>
+            {/* Put this part before </body> tag */}
+            <input type="checkbox" id="my_modal_6" className="modal-toggle" />
+            <div className="modal" role="dialog">
+              <div className=" modal-box  bg-white ">
+                <LoginForm></LoginForm>
+                <div className="">
+                  <label
+                    htmlFor="my_modal_6"
+                    className=" cursor-pointer absolute right-2 top-2"
+                  >
+                    <GiCancel className="text-2xl text-gray-500"></GiCancel>
+                  </label>
+                </div>
               </div>
             </div>
           </div>
