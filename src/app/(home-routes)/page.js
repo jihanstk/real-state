@@ -1,5 +1,6 @@
 import AreaProperty from "@/components/AreaProperty/AreaProperty";
 import Banner from "@/components/Banner/Banner";
+import Category from "@/components/Category/Category";
 import ChoiceUs from "@/components/ChoiceUs/ChoiceUs";
 import Contact from "@/components/Contact/Contact";
 import FeaturedHouse from "@/components/FeaturedHouse/FeaturedHouse";
@@ -11,9 +12,11 @@ const page = () => {
       <Banner />
       <AreaProperty />
       <FeaturedHouse />
+      <Category></Category>
       <OurAgents />
       <ChoiceUs></ChoiceUs>
       <Contact></Contact>
+
     </div>
   );
 };
