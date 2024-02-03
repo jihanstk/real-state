@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsTelephoneFill } from "react-icons/bs";
 import { HiOutlineBars3BottomLeft } from "react-icons/hi2";
 import { PiUserCircleFill } from "react-icons/pi";
@@ -47,9 +47,42 @@ const Navigation = () => {
       path: "/contact",
     },
   ];
+
+  const [isScrolled, setIsScrolled] = useState(false);
+  // Stricky Navbar
+  const handleScroll = () => {
+    if (window.scrollY > 100) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="fixed w-full z-50">
-      <div className="hidden md:flex justify-between px-7 text-white border border-1">
+    <div className=" w-full fixed z-50">
+      <div 
+      // className="hidden md:flex justify-between px-7 text-white border border-1"
+      className={`${
+        isScrolled
+          ? "hidden"
+          : "hidden md:flex justify-between px-7 text-white border border-1"
+      }`  }
+      >
         <div className="flex">
           <div className="border-x">
             <FaFacebookF className="m-3" />
@@ -82,7 +115,15 @@ const Navigation = () => {
           <p className="border-x flex items-center px-6">+1 408 167 1234</p>
         </div>
       </div>
-      <div className="flex justify-between items-center px-7 py-4 text-white">
+      <div
+        className={`${
+          isScrolled
+            ? "bg-slate-900  w-full text-white flex justify-between items-center px-7 py-4 top-0"
+            : "  text-white flex justify-between items-center px-7 py-4"
+        }  navbar transition duration-300 ease-in-out z-10`}
+        style={{ transition: "all 0.3 ease" }}
+      >
+        {/* <div className="flex justify-between items-center px-7 py-4 text-white"> */}
         <div className="inline-block lg:hidden">
           <button onClick={() => setOpen(!open)}>
             <HiOutlineBars3BottomLeft className="text-3xl" />

@@ -1,9 +1,5 @@
 "use client";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "./banner.css";
-import "swiper/css";
-import "swiper/css/autoplay";
-import "swiper/css/effect-fade";
 import banner from "../../../assets/banner.jpg";
 import Image from "next/image";
 const Banner = () => {
