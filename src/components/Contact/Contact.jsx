@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
     <div>
-      <div className="relative mx-auto bg-[url('https://images.pexels.com/photos/731082/pexels-photo-731082.jpeg?auto=compress&cs=tinysrgb&w=800')] bg-fixed w-full h-screen bg-cover bg-center bg-no-repeat">
+      <div className="relative mx-auto bg-[url('https://main.wpresidence.net/wp-content/uploads/2022/10/sketch32-5.svg')] bg-fixed w-full h-screen bg-cover bg-center bg-no-repeat">
         {/* <Image
           width={1000}
           height={100}
@@ -10,7 +10,7 @@ const Contact = () => {
           src={contact}
           alt="House Image"
         /> */}
-        <div className="absolute top-0 w-full h-full bg-black/60  flex items-center ">
+        <div className="absolute top-0 w-full h-full bg-[#002B54]/95 z-0  flex items-center ">
           <div className=" banner-overlay  w-full m-auto p-4 text-center">
             <h1 className=" text-3xl  md:font-bold text-white mb-10">
               Contact us today if you’d like to know more about how we help buy,

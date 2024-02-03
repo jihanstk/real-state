@@ -9,8 +9,13 @@
 }
 
 .latest-container > .latest-sub:first-child {
-  background-color: rgba(10, 10, 78, 0.978);
-  color: rgba(240, 248, 255, 0.818);
+ @apply shadow-2xl
+}
+.latest-sub:hover{
+ @apply shadow-xl;
+ 
+ transition:1s ease-in-out;
+
 }
 .latest-sub:hover .latest-post-image img {
   transform: scale(1.2);
