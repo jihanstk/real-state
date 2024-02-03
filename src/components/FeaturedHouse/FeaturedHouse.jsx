@@ -152,22 +152,6 @@ const FeaturedHouse = () => {
       price: 600000,
       rating: 4.3,
     },
-    {
-      id: 10,
-      housePhoto:
-        "https://images.pexels.com/photos/276593/pexels-photo-276593.jpeg?auto=compress&cs=tinysrgb&w=800",
-      title: "Elegant Townhouse",
-      description:
-        "Escape to the charm of this cozy cottage, surrounded by a lovely garden. Perfect for a peaceful retreat, this property features 2 bedrooms, 1 toilet, and a comfortable house size of 1200 square feet. Owned by JaneSmith, located in Suburb B, this cottage is available for rent at $2000 per month with a rating of 4.0.",
-      bedroom: 3,
-      toilet: 2,
-      houseSize: 2000,
-      user: "MichaelWilson",
-      location: "City J",
-      status: "For Rent",
-      price: 2500,
-      rating: 4.1,
-    },
   ];
   return (
     <div className="latest-main">
@@ -220,14 +204,14 @@ const FeaturedHouse = () => {
               <Link href="#">
                 <div className="flex justify-between items-center gap-3">
                   <div className="flex items-center">
-                  <Image
-                    width={100}
-                    height={100}
-                    className="w-10 h-10 rounded-full object-cover"
-                    src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800"
-                    alt="user"
-                  />
-                  <p className="text-xl">{house.user}</p>
+                    <Image
+                      width={100}
+                      height={100}
+                      className="w-10 h-10 rounded-full object-cover"
+                      src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800"
+                      alt="user"
+                    />
+                    <p className="text-xl">{house.user}</p>
                   </div>
 
                   <div className="flex text-lg">

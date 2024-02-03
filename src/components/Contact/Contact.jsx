@@ -1,20 +1,16 @@
-import React from "react";
-import contact from "../../../assets/contact.jpg";
-import Image from "next/image";
-
 const Contact = () => {
   return (
     <div>
-      <div className="relative mx-auto">
-        <Image
+      <div className="relative mx-auto bg-[url('https://images.pexels.com/photos/731082/pexels-photo-731082.jpeg?auto=compress&cs=tinysrgb&w=800')] bg-fixed w-full h-screen bg-cover bg-center bg-no-repeat">
+        {/* <Image
           width={1000}
           height={100}
           style={{ width: "100%", height: "100vh", objectFit: "cover" }}
-          className="mx-auto"
+          className="mx-auto "
           src={contact}
           alt="House Image"
-        />
-        <div className="absolute top-0 w-full h-full bg-black/50  flex items-center ">
+        /> */}
+        <div className="absolute top-0 w-full h-full bg-black/60  flex items-center ">
           <div className=" banner-overlay  w-full m-auto p-4 text-center">
             <h1 className=" text-3xl  md:font-bold text-white mb-10">
               Contact us today if you’d like to know more about how we help buy,
@@ -50,8 +46,17 @@ const Contact = () => {
                   className="bg-slate-100 p-3 rounded border border-1 border-slate-400"
                 />
               </div>
-              <input type="text" placeholder="Massage" className="bg-slate-100 p-3 rounded border border-1 border-slate-400 w-full h-24 my-3" />
-              <button type="submit"className="bg-blue-600 text-center text-white font-bold py-3 rounded border border-1 border-slate-400 w-full">Send Email</button>
+              <input
+                type="text"
+                placeholder="Massage"
+                className="bg-slate-100 p-3 rounded border border-1 border-slate-400 w-full h-24 my-3"
+              />
+              <button
+                type="submit"
+                className="bg-blue-600 text-center text-white font-bold py-3 rounded border border-1 border-slate-400 w-full"
+              >
+                Send Email
+              </button>
             </div>
           </div>
         </div>

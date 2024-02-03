@@ -1,7 +1,10 @@
 "use client";
-import "./banner.css";
-import banner from "../../../assets/banner.jpg";
 import Image from "next/image";
+import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/effect-fade";
+import banner from "../../../assets/banner.jpg";
+import "./banner.css";
 const Banner = () => {
   return (
     <div>
