@@ -165,7 +165,10 @@ const FeaturedHouse = () => {
       </div>
       <div className="latest-container w-full ">
         {houses.map((house) => (
-          <div key={house.id} className="latest-sub bg-slate-100 p-4 rounded">
+          <div
+            key={house.id}
+            className="latest-sub bg-slate-200 shadow-md p-4 rounded"
+          >
             <div className="latest-post-image overflow-hidden ">
               <Image
                 width={1000}

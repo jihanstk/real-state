@@ -16,6 +16,7 @@ const LoginForm = () => {
       </div>
       <div className="w-full">
         {register === "login" ? (
+          // login Form
           <form className="card-body ">
             <div className="form-control">
               <label className="label">
@@ -49,6 +50,7 @@ const LoginForm = () => {
             </div>
           </form>
         ) : (
+          // Register Form.
           <form className="card-body ">
             <div className="form-control">
               <label className="label">

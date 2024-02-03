@@ -83,7 +83,7 @@ const Navigation = () => {
           isScrolled
             ? "hidden"
             : "hidden md:flex justify-between px-7 text-white border border-1"
-        } duration-1000`}
+        } duration-300`}
       >
         <div className="flex">
           <div className="border-x">
@@ -120,9 +120,9 @@ const Navigation = () => {
       <div
         className={`${
           isScrolled
-            ? "bg-slate-900  w-full text-white flex justify-between items-center px-7 py-4 top-0"
+            ? "bg-slate-200  w-full text-slate-600 flex justify-between items-center px-7 py-4 top-0"
             : "  text-white flex justify-between items-center px-7 py-4"
-        }  navbar transition duration-300 ease-in-out z-10`}
+        }  navbar transition duration-1000 ease-in-out z-10`}
         style={{ transition: "all 0.3 ease" }}
       >
         {/* <div className="flex justify-between items-center px-7 py-4 text-white"> */}
@@ -141,7 +141,7 @@ const Navigation = () => {
         </div>
         <div className="">
           <ul
-            className={`lg:flex justify-center items-center gap-3 absolute lg:static font-bold w-full lg:w-auto  pl-20 top-20 lg:pb-0 pb-20 duration-1000 ease-in-out ${
+            className={`lg:flex justify-center items-center gap-3 absolute lg:static font-bold w-full lg:w-auto  pl-20 top-20 lg:pb-0 pb-20 duration-100 ease-in-out ${
               !open ? "-left-[100rem]" : "left-0"
             }`}
           >
