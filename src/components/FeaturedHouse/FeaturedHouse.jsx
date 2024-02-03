@@ -179,10 +179,10 @@ const FeaturedHouse = () => {
           specific categories.
         </p>
       </div>
-      <div className="latest-container w-full">
-        {houses.slice(0, 6).map((house) => (
-          <div key={house.id} className="latest-sub">
-            <div className="latest-post-image overflow-hidden">
+      <div className="latest-container w-full ">
+        {houses.map((house) => (
+          <div key={house.id} className="latest-sub bg-slate-100 p-4 rounded">
+            <div className="latest-post-image overflow-hidden ">
               <Image
                 width={1000}
                 height={1000}
@@ -197,47 +197,29 @@ const FeaturedHouse = () => {
                   {house.title}
                 </h2>
               </Link>
-              <p className="text-slate-500">
+              {/* <p className="text-slate-500">
                 {house.description.slice(0, 100)}...
-              </p>
-              <div className="flex justify-between mt-3 text-center text-slate-600 my-5">
-                <p className="flex gap-2 items-center text-xl w-3/4 text-center">
+              </p> */}
+              <div className="flex justify-between mt-3  border-y border-1  border-slate-300 my-5 py-5">
+                <p className=" text-xl w-full text-left">
+                  <span>{house.houseSize} sqf</span>
+                </p>
+                <p className="text-xl w-full flex items-center  text-center">
                   <span>
                     <IoBedOutline />
                   </span>
-                  <span>{house.bedroom}</span>
+                  <span>{house.bedroom} Beds</span>
                 </p>
-                <p className=" text-xl w-full text-left">
-                  <span>
-                    {house.houseSize} FT<sup>2</sup>
-                  </span>
-                </p>
-                <p className="flex gap-2 items-center text-xl w-full text-center ">
+                <p className="flex items-center text-xl w-full text-center ">
                   <span>
                     <PiToiletDuotone />
                   </span>
-                  <span>{house.toilet}</span>
+                  <span>{house.toilet} baths</span>
                 </p>
               </div>
-              {/* <div className="flex items-center justify-between my-4">
-                <p className="text-xl">
-                  <span className="font-bold"> $ </span>
-                  {house.price}
-                </p>
-                <p className="flex gap-2 items-center ">
-                  {" "}
-                  <span className="flex items-center text-yellow-500 text-xl">
-                    <IoStar />
-                    <IoStar />
-                    <IoStar />
-                    <IoStar />
-                    <IoStar />
-                  </span>{" "}
-                  <span className="text-xl"> {house.rating}</span>
-                </p>
-              </div> */}
               <Link href="#">
-                <div className="flex items-center gap-3">
+                <div className="flex justify-between items-center gap-3">
+                  <div className="flex items-center">
                   <Image
                     width={100}
                     height={100}
@@ -245,8 +227,13 @@ const FeaturedHouse = () => {
                     src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800"
                     alt="user"
                   />
-
                   <p className="text-xl">{house.user}</p>
+                  </div>
+
+                  <div className="flex text-lg">
+                    <p>Price : </p>
+                    <p>{house.price}</p>
+                  </div>
                 </div>
               </Link>
             </div>
