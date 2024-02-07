@@ -3,6 +3,8 @@ import { useState } from "react";
 
 const LoginForm = () => {
   const [register, setRegister] = useState("login");
+  //   const { login, signUp, updateUserProfile, googleLogin } =
+  //     useContext(AuthContext);
   return (
     <div className="flex">
       <div className="w-full">

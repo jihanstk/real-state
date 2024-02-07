@@ -14,3 +14,11 @@ body{
   max-width: 60% !important;
 }
 
+.social-hide{
+  display: none !important;
+  transition: 2s ease-in-out;
+}
+.main-nav-style{
+  background: rgb(226 232 240 );
+  color: black !important;
+}

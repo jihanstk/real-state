@@ -52,38 +52,36 @@ const Navigation = () => {
 
   const [isScrolled, setIsScrolled] = useState(false);
   // Stricky Navbar
-  const handleScroll = () => {
-    if (window.scrollY > 100) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
-  };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+    const banner = document.getElementById("banner");
+    const socialNav = document.getElementById("social-nav");
+    const mainNav = document.getElementById("main-nav");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            socialNav.classList.add("social-hide");
+            mainNav.classList.add("main-nav-style");
+          } else {
+            socialNav.classList.remove("social-hide");
+            mainNav.classList.remove("main-nav-style");
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+    observer.observe(banner);
+  });
 
   return (
     <div className=" w-full fixed z-50">
       <div
+        id="social-nav"
         // className="hidden md:flex justify-between px-7 text-white border border-1"
-        className={`${
-          isScrolled
-            ? "hidden"
-            : "hidden md:flex justify-between px-7 text-white border border-1"
-        } duration-300`}
+        className={`hidden md:flex justify-between px-7 text-white border border-1 duration-[2s]`}
       >
         <div className="flex">
           <div className="border-x">
@@ -118,12 +116,8 @@ const Navigation = () => {
         </div>
       </div>
       <div
-        className={`${
-          isScrolled
-            ? "bg-slate-200  w-full text-slate-600 flex justify-between items-center px-7 py-4 top-0"
-            : "  text-white flex justify-between items-center px-7 py-4"
-        }  navbar transition duration-1000 ease-in-out z-10`}
-        style={{ transition: "all 0.3 ease" }}
+        id="main-nav"
+        className={` text-white flex justify-between items-center px-7 py-4 navbar transition duration-300 ease-in-out z-10`}
       >
         {/* <div className="flex justify-between items-center px-7 py-4 text-white"> */}
         <div className="inline-block lg:hidden">

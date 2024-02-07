@@ -7,7 +7,7 @@ import banner from "../../../assets/banner.jpg";
 import "./banner.css";
 const Banner = () => {
   return (
-    <div>
+    <div id="banner">
       <div className="relative mx-auto">
         <Image
           width={1000}
